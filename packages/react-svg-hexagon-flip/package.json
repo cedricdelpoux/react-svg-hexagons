@@ -1,6 +1,6 @@
 {
   "name": "react-svg-hexagon-flip",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": {
     "name": "Cédric Delpoux",
     "email": "xuopled@gmail.com"
@@ -35,8 +35,6 @@
     "prepublishOnly": "NODE_ENV=production yarn build",
     "test": "NODE_ENV=test jest"
   },
-  "dependencies": {},
-  "devDependencies": {},
   "peerDependencies": {
     "react": ">= 16.3.x",
     "styled-components": "^4.1.1"
