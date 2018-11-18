@@ -1,0 +1,7 @@
+*.log
+/node_modules
+packages/*/coverage
+packages/*/dist
+packages/*/es
+packages/*/lib
+packages/*/node_modules

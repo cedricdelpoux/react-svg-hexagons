@@ -1,0 +1,46 @@
+{
+  "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna exec --ignore website -- yarn build",
+    "clean": "lerna exec yarn clean",
+    "compile": "lerna run compile",
+    "lint": "lerna exec --ignore website -- yarn lint",
+    "release": "lerna publish",
+    "test": "lerna exec yarn test",
+    "dev": "lerna exec --scope website -- yarn dev",
+    "website": "lerna exec --scope website -- yarn website"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.5",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "babel-plugin-styled-components": "^1.8.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "eslint": "^5.9.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^1.1.4",
+    "jest": "^23.6.0",
+    "lerna": "^3.4.3",
+    "lint-staged": "^8.0.4",
+    "prettier": "^1.15.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.67.1",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-replace": "^2.1.0",
+    "styled-components": "^4.1.1"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

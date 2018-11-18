@@ -1,0 +1,42 @@
+{
+  "name": "react-svg-hexagon",
+  "version": "0.0.0",
+  "author": {
+    "name": "Cédric Delpoux",
+    "email": "xuopled@gmail.com"
+  },
+  "homepage": "https://github.com/xuopled/react-svg-hexagon#readme",
+  "description": "A React Svg valid hexagon component that can contain html and components",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuopled/react-svg-hexagon.git"
+  },
+  "files": [
+    "dist",
+    "es",
+    "lib",
+    "src"
+  ],
+  "keywords": [
+    "react",
+    "hexagon",
+    "svg",
+    "html"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "unpkg": "dist/react-svg-hexagon.min.js",
+  "peerDependencies": {
+    "react": ">= 16.3.x",
+    "styled-components": "^4.1.1"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "clean": "rimraf coverage dist es lib",
+    "lint": "eslint src",
+    "precommit": "lint-staged",
+    "prepublishOnly": "NODE_ENV=production yarn build",
+    "test": "NODE_ENV=test jest"
+  }
+}
