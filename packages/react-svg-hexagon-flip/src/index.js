@@ -13,8 +13,6 @@ const Face = styled.div`
   transition: transform ${props => props.transitionDuration};
 `
 
-const hoverableCss = css``
-
 const ClipPath = styled.div`
   position: absolute;
   width: ${props => props.width}px;
@@ -100,7 +98,7 @@ class HexagonFlip extends React.Component {
   }
 
   render() {
-    const {dimensions, flipped} = this.state
+    const {dimensions} = this.state
     const {children, clipPath, transitionDuration} = this.props
 
     if (!dimensions) {
@@ -110,7 +108,7 @@ class HexagonFlip extends React.Component {
     return React.cloneElement(<Wrapper />, {
       width: dimensions.width,
       height: dimensions.height,
-      flippable: !!!clipPath,
+      flippable: clipPath ? false : true,
       children: [
         clipPath &&
           React.cloneElement(<ClipPath />, {
